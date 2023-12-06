@@ -4,6 +4,7 @@ using namespace std;
 
 
 // n какое то натуральное число
+// примеры циклов
 void cycle() {
     int n;
 
