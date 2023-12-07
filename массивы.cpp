@@ -35,3 +35,67 @@ void monotonn_frag(){
     cout << maxlen;
 }
 
+
+//разворот массива(алгоритм работы с симметричными парами)\
+void reverse_array(){
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+    int L = 0;
+    int R = n - 1;
+    while (R > L){
+        int tmp = arr[L];
+        arr[L] = arr[R];
+        arr[R] = tmp;
+        L++;
+        R++;
+    }
+
+}
+
+//сдвиг массива влево
+void sdig_left(){
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+    int tmp = arr[0];
+    for (int i = 0; i < n-1; ++i) {
+        arr[i] = arr[i+1];
+    }
+    arr[n-1] = tmp;
+    //выводим массив
+}
+
+//сдвиг массива с овер большими числами(с использованием доп.массива)
+void sdvig_very_big_numbers() {
+    int n, k;
+    cin >> n;// колво чисел в массиве arr
+    cin >> k;// колво чисел в вспомогательном массиве arrtmp
+    int arr[n];
+    int arrtmp
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+
+    for (int i = 0; i < k; ++i) {
+        arrtmp[i] = arr[i];
+    }
+
+    for (int i = k; i < n; ++i) {
+        arr[i - k] = arr[i];
+    }
+    for (int i = n-k; i < n; ++i) {
+        arr[i] = arrtmp[i - n + k];
+    }
+
+    //выводим массив
+}
+
+
+
